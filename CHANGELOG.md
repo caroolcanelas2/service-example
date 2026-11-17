@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Replace `httpstat.us` with `httpbingo.org` in the status client
+- Replace `console.info` with structured `ctx.vtex.logger` calls in the status and validate middlewares
+- Add outbound-access policies for VTEX hosts
+- Update `@vtex/api`, `typescript` and `@types/node` packages
+
 ## [0.3.0] - 2024-10-23
 
 ### Changed

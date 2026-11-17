@@ -1844,10 +1844,12 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.15.54.tgz#59ed60e7b0d56905a654292e8d73275034eb6283"
   integrity sha512-1RWYiq+5UfozGsU6MwJyFX6BtktcT10XRjvcAQmskCtMcW3tPske88lM/nHv7BQG1w9KBXI1zPGuu5PnNCX14g==
 
-"@types/node@^12.0.0":
-  version "12.20.55"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.20.55.tgz#c329cbd434c42164f846b909bd6f85b5537f6240"
-  integrity sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==
+"@types/node@^20.0.0":
+  version "20.19.43"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.19.43.tgz#fcecf580ba42a0db55cf404c372c97973c376c97"
+  integrity sha512-6oYBAi5ikg4Pl+kGsoYtawUMBT2zZMCvPNF7pVLnHZfd1zf38DRiWn/gT01RYCdUqkv7Fhr+C9ot4/tb+2sVvA==
+  dependencies:
+    undici-types "~6.21.0"
 
 "@types/prop-types@*", "@types/prop-types@^15.7.0":
   version "15.7.5"
@@ -1961,10 +1963,10 @@
   resolved "https://registry.yarnpkg.com/@types/zen-observable/-/zen-observable-0.8.3.tgz#781d360c282436494b32fe7d9f7f8e64b3118aa3"
   integrity sha512-fbF6oTd4sGGy0xjHPKAt+eS2CrxJ3+6gQ3FGcBoIJR2TLAyCkCyI8JqZNy+FeON0AhVgNJoUumVoZQjBFUqHkw==
 
-"@vtex/api@6.52.1":
-  version "6.52.1"
-  resolved "https://registry.yarnpkg.com/@vtex/api/-/api-6.52.1.tgz#48fa6d07e788194de1a56c5995fa642f7552f803"
-  integrity sha512-uYO72LB//LWNiKRFY+Dt2TmW1ZPRPtj7rJpW1HqGEgncDMj8+oNzqy+8ZYqN3QLeg56csYp9Z6f+7DnPM3U4wg==
+"@vtex/api@6.52.7":
+  version "6.52.7"
+  resolved "https://registry.yarnpkg.com/@vtex/api/-/api-6.52.7.tgz#8fc3dc5932b49d55c747551318c4dfea4f8c8532"
+  integrity sha512-mtX0IWrMAsZf4Y6NTDiHFF3BLz2EeVJlgT4OKIXqhEkXagckBptXDgV50pGghQBdfg3vsCkyZPJ3aNqHkUjPCg==
   dependencies:
     "@types/koa" "^2.11.0"
     "@types/koa-compose" "^3.2.3"
@@ -6625,10 +6627,10 @@ typed-array-length@^1.0.4:
     for-each "^0.3.3"
     is-typed-array "^1.1.9"
 
-typescript@3.9.7:
-  version "3.9.7"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
-  integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
+typescript@5.5.3:
+  version "5.5.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.5.3.tgz#e1b0a3c394190838a0b168e771b0ad56a0af0faa"
+  integrity sha512-/hreyEujaB0w76zKo6717l3L0o/qEUtRgdvUBvlkhoWeOVMjMuHNHk0BRBzikzuGDqNmPQbg5ifMEqsHLiIUcQ==
 
 typescript@^3.3.3333:
   version "3.9.10"
@@ -6644,6 +6646,11 @@ unbox-primitive@^1.0.2:
     has-bigints "^1.0.2"
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
+
+undici-types@~6.21.0:
+  version "6.21.0"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.21.0.tgz#691d00af3909be93a7faa13be61b3a5b50ef12cb"
+  integrity sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==
 
 undici-types@~8.9.0:
   version "8.9.0"

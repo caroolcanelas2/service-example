@@ -2,26 +2,52 @@ export async function status(ctx: Context, next: () => Promise<any>) {
   const {
     state: { code },
     clients: { status: statusClient },
+    vtex: { logger },
   } = ctx
 
-  console.info('Received code:', code)
+  logger.info({
+    message: 'Fetching status',
+    code,
+    routeId: 'status',
+  })
 
-  const statusResponse = await statusClient.getStatus(code)
+  try {
+    const statusResponse = await statusClient.getStatus(code)
 
-  console.info('Status response:', statusResponse)
+    logger.info({
+      message: 'Status body received',
+      code,
+      statusResponse,
+      routeId: 'status',
+    })
 
-  const {
-    headers,
-    data,
-    status: responseStatus,
-  } = await statusClient.getStatusWithHeaders(code)
+    const {
+      headers,
+      data,
+      status: responseStatus,
+    } = await statusClient.getStatusWithHeaders(code)
 
-  console.info('Status headers', headers)
-  console.info('Status data:', data)
+    logger.info({
+      message: 'Status response ready',
+      code,
+      responseStatus,
+      cacheControl: headers['cache-control'],
+      routeId: 'status',
+    })
 
-  ctx.status = responseStatus
-  ctx.body = data
-  ctx.set('Cache-Control', headers['cache-control'])
+    ctx.status = responseStatus
+    ctx.body = data
+    ctx.set('Cache-Control', headers['cache-control'])
+  } catch (error) {
+    logger.error({
+      message: 'Failed to fetch status',
+      code,
+      routeId: 'status',
+      error: error instanceof Error ? error.message : String(error),
+    })
+
+    throw error
+  }
 
   await next()
 }

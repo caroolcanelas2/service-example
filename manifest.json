@@ -8,7 +8,7 @@
   "categories": [],
   "dependencies": {},
   "builders": {
-    "node": "6.x",
+    "node": "7.x",
     "docs": "0.x"
   },
   "scripts": {
@@ -19,7 +19,7 @@
     {
       "name": "outbound-access",
       "attrs": {
-        "host": "httpstat.us",
+        "host": "httpbingo.org",
         "path": "*"
       }
     },
@@ -28,6 +28,48 @@
     },
     {
       "name": "colossus-write-logs"
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexdemostores.com",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.vtexcommercestable.com.br",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/sessions"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "{{account}}.myvtex.com",
+        "path": "/*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "dpo.privacytools.com.br",
+        "path": "/*"
+      }
     }
   ],
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"

@@ -3,11 +3,11 @@ import { ExternalClient } from '@vtex/api'
 
 export default class Status extends ExternalClient {
   constructor(context: IOContext, options?: InstanceOptions) {
-    super('http://httpstat.us', context, options)
+    super('http://httpbingo.org', context, options)
   }
 
   public async getStatus(status: number): Promise<string> {
-    return this.http.get(status.toString(), {
+    return this.http.get(`status/${status}`, {
       metric: 'status-get',
     })
   }
@@ -15,7 +15,7 @@ export default class Status extends ExternalClient {
   public async getStatusWithHeaders(
     status: number
   ): Promise<IOResponse<string>> {
-    return this.http.getRaw(status.toString(), {
+    return this.http.getRaw(`status/${status}`, {
       metric: 'status-get-raw',
     })
   }
@@ -23,7 +23,7 @@ export default class Status extends ExternalClient {
   public async getStatusAndForceMaxAge(
     status: number
   ): Promise<IOResponse<string>> {
-    return this.http.get(status.toString(), {
+    return this.http.get(`status/${status}`, {
       // when using an LRUCache, this will force the response to be cached
       forceMaxAge: 5000,
       metric: 'status-get-forceMaxAge',
